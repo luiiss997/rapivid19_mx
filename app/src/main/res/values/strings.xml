@@ -37,5 +37,29 @@
         asimismo se permitirá también que las personas puedan salir a caminar alrededor
         de sus domicilios durante el día.</string>
     <string name="rojo_s">No salgas si no es estrictamente necesario.</string>
+    <!-- Pantalla About -->
+    <string name="sintomas">Sintomas del Covid-19</string>
+    <string name="sintomasewe"> La COVID-19 afecta de distintas maneras en función de cada persona.
+        La mayoría de las personas que se contagian presentan síntomas de intensidad leve o moderada,
+        y se recuperan sin necesidad de hospitalización.\n</string>
+    <string name="sintomas1">Los Sintomas más Comunes Son:</string>
+    <string name="sintomas_html">
+        &#8226; Fiebre\n&#8226; Tos seca\n&#8226; Cansancio
+    </string>
+    <string name="tratamiento">Tratamiento</string>
+    <string name="tratamiento_header">Hasta la fecha, no hay vacunas o medicamentos específicos
+        contra la COVID-19. Se están investigando tratamientos, que serán probados en
+        ensayos clínicos.\n</string>
+    <string name="tra_m">Tratamientos Médicos:</string>
+    <string name="tra_m_p">Si tiene síntomas leves y, por lo demás, está sano, aíslese y póngase
+        en contacto con su proveedor de atención médica o con una línea de información sobre la
+        COVID‑19 para recibir asesoramiento.
+    Solicite atención médica si tiene fiebre, tos y dificultad para respirar. Llame con antelación.\n
+    </string>
+    <string name="cuidado_m">Cuidado Personal:</string>
+    <string name="cuidado_p">Si se siente enfermo debe descansar, beber mucho líquido y comer alimentos nutritivos.
+        Permanezca en una habitación separada de los demás miembros de la familia y utilice un baño exclusivamente
+        para usted si es posible. Limpie y desinfecte frecuentemente las superficies que toque.
+    </string>
 
 </resources>

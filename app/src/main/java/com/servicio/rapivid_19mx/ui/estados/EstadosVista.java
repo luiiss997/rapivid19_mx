@@ -12,7 +12,5 @@ public class EstadosVista extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_estados_vista);
-        Toolbar toolbar = findViewById(R.id.toolbar_edo);
-        setSupportActionBar(toolbar);
     }
 }

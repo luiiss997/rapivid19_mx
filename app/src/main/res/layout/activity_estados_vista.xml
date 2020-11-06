@@ -6,33 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".ui.estados.EstadosVista">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appbarlay"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar_edo"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
-    </com.google.android.material.appbar.AppBarLayout>
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="8dp"
         android:text="@string/stadics2"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/appbarlay" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/estado_nombre"
@@ -49,7 +32,7 @@
         android:layout_width="160dp"
         android:layout_height="100dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
         app:cardCornerRadius="10dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -97,7 +80,7 @@
         android:id="@+id/cardView2"
         android:layout_width="160dp"
         android:layout_height="100dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="32dp"
         app:cardCornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -242,10 +225,11 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraint"
         android:layout_width="match_parent"
-        android:layout_height="350dp"
-        android:layout_marginTop="24dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
         android:background="@drawable/semaforo_bg"
         android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cardView3">
@@ -276,7 +260,7 @@
             android:layout_width="110dp"
             android:layout_height="110dp"
             android:layout_margin="16dp"
-            android:src="@drawable/Susana_Semaforo_Naranja"
+            android:src="@drawable/semaforo_naranja"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/textView3" />
 
@@ -298,8 +282,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="1dp"
             android:layout_marginEnd="8dp"
-            android:text="@string/rojo"
             android:justificationMode="inter_word"
+            android:text="@string/rojo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/img_color_semaforo"
@@ -311,13 +295,19 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="2dp"
-            android:text="@string/rojo_s"
             android:gravity="center"
-            app:layout_constraintTop_toBottomOf="@id/img_color_semaforo"
+            android:text="@string/rojo_s"
+            app:layout_constraintEnd_toEndOf="@id/img_color_semaforo"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="@id/img_color_semaforo"/>
+            app:layout_constraintTop_toBottomOf="@id/img_color_semaforo" />
 
-
+        <ImageView
+            android:layout_width="280dp"
+            android:layout_height="150dp"
+            android:src="@drawable/coviduwu"
+            app:layout_constraintTop_toBottomOf="@id/info_completa"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
