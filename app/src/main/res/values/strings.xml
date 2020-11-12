@@ -6,6 +6,7 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="content_descriprion">#</string>
 
     <string name="menu_general">Información General</string>
     <string name="menu_estados">Casos por Estado</string>
@@ -39,7 +40,7 @@
     <string name="rojo_s">No salgas si no es estrictamente necesario.</string>
     <!-- Pantalla About -->
     <string name="sintomas">Sintomas del Covid-19</string>
-    <string name="sintomasewe"> La COVID-19 afecta de distintas maneras en función de cada persona.
+    <string name="sintomasewe"> El COVID-19 afecta de distintas maneras en función de cada persona.
         La mayoría de las personas que se contagian presentan síntomas de intensidad leve o moderada,
         y se recuperan sin necesidad de hospitalización.\n</string>
     <string name="sintomas1">Los Sintomas más Comunes Son:</string>
@@ -61,5 +62,35 @@
         Permanezca en una habitación separada de los demás miembros de la familia y utilice un baño exclusivamente
         para usted si es posible. Limpie y desinfecte frecuentemente las superficies que toque.
     </string>
+    <string name="q_a">Preguntas y Respuestas</string>
+    <string name="question">¿Qué es el coronavirus?</string>
+    <string name="answer">Los coronavirus son una familia de virus que causan enfermedades
+        (desde el resfriado común hasta enfermedades respiratorias más graves) y circulan entre humanos y animales.
+
+        En este caso, se trata del SARS-COV2. Apareció en China en diciembre pasado y
+        provoca una enfermedad llamada COVID-19, que se extendió por el mundo y fue declarada
+        pandemia global por la Organización Mundial de la Salud.\n</string>
+
+    <string name="question1">¿Puedo contaguiarme de alguien sin sintomas?</string>
+    <string name="answer1">El virus se contagia con mayor facilidad cuando una persona infectada presenta síntomas,
+        pero también es posible contagiar el virus antes de que haya síntomas. Por eso, lo mejor es tener
+        las manos limpias y no tocarse el rostro.\n</string>
+    <string name="question2">¿Debo Usar Cubrebocas?</string>
+    <string name="answer2">El cubreboca es una barrera útil para evitar que se expulsen las gotas de saliva que potencialmente estén contaminadas.
+        El cubreboca se debe usar correctamente, sobre todo en lugares públicos cerrados en los que no se pueda mantener la sana distancia.
+        No te olvides de usar el cubreboca junto con las medidas básicas de prevención como son la sana distancia (dos metros),
+        lavado frecuente de manos y estornudo de etiqueta.</string>
+    <string name="cuidados">Cuidados</string>
+    <string name="cuidados1">Toma las precauciones adecuadas e infórmate bien para protegerte y cuidar de quienes te rodean.
+        Sigue las recomendaciones de los organismos de salud pública de tu zona.</string>
+    <string name="cuidados_2">Para evitar la propagación del COVID-19:</string>
+    <string name="cuidados_3">
+        &#8226; Lávate las manos con frecuencia. Usa agua y jabón o un desinfectante de manos a base de alcohol.\n
+        &#8226; Mantén una distancia de seguridad con personas que tosan o estornuden.\n
+        &#8226; Utiliza mascarilla cuando no sea posible mantener el distanciamiento físico.\n
+        &#8226; No te toques los ojos, la nariz ni la boca.\n
+        &#8226; Cuando tosas o estornudes, cúbrete la nariz y la boca con el codo flexionado o con un pañuelo.\n
+        &#8226; Si no te encuentras bien, quédate en casa.\n
+        &#8226; En caso de que tengas fiebre, tos o dificultad para respirar, busca atención médica.</string>
 
 </resources>

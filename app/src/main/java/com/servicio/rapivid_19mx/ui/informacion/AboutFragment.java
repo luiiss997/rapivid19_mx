@@ -6,20 +6,22 @@ import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import android.transition.AutoTransition;
+import android.transition.Transition;
 import android.transition.TransitionManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 
 import com.servicio.rapivid_19mx.R;
 
 public class AboutFragment extends Fragment {
 
-    private LinearLayout expandibleView, expandibleView2;
-    private Button arrowButton, arrowButton2;
-    private CardView cardView, cardView2;
+    private LinearLayout expandibleView, expandibleView2, expandibleView3, expandibleView4;
+    private Button arrowButton, arrowButton2, arrowButton3, arrowButton4;
+    private ScrollView scrollView;
 
     public AboutFragment() {
     }
@@ -39,14 +41,12 @@ public class AboutFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 if (expandibleView.getVisibility()==View.GONE){
-                    TransitionManager.beginDelayedTransition(cardView, new AutoTransition());
-                    TransitionManager.beginDelayedTransition(cardView2);
+                    TransitionManager.beginDelayedTransition(scrollView);
                     expandibleView.setVisibility(View.VISIBLE);
                     arrowButton.setBackgroundResource(R.drawable.ic_arrow_up);
                 }else{
                     expandibleView.setVisibility(View.GONE);
-                    TransitionManager.beginDelayedTransition(cardView, new AutoTransition());
-                    TransitionManager.beginDelayedTransition(cardView2);
+                    TransitionManager.beginDelayedTransition(scrollView);
                     arrowButton.setBackgroundResource(R.drawable.ic_arrow_down_24);
                 }
             }
@@ -56,27 +56,64 @@ public class AboutFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 if (expandibleView2.getVisibility()==View.GONE){
-                    TransitionManager.beginDelayedTransition(cardView2, new AutoTransition());
+                    TransitionManager.beginDelayedTransition(scrollView);
                     expandibleView2.setVisibility(View.VISIBLE);
                     arrowButton2.setBackgroundResource(R.drawable.ic_arrow_up);
                 }else{
-                    TransitionManager.beginDelayedTransition(cardView2, new AutoTransition());
                     expandibleView2.setVisibility(View.GONE);
+                    TransitionManager.beginDelayedTransition(scrollView);
                     arrowButton2.setBackgroundResource(R.drawable.ic_arrow_down_24);
                 }
             }
         });
+
+        arrowButton3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (expandibleView3.getVisibility()==View.GONE){
+                    TransitionManager.beginDelayedTransition(scrollView);
+                    expandibleView3.setVisibility(View.VISIBLE);
+                    arrowButton3.setBackgroundResource(R.drawable.ic_arrow_up);
+                }else{
+                    expandibleView3.setVisibility(View.GONE);
+                    TransitionManager.beginDelayedTransition(scrollView);
+                    arrowButton3.setBackgroundResource(R.drawable.ic_arrow_down_24);
+                }
+            }
+        });
+
+        arrowButton4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (expandibleView4.getVisibility()==View.GONE){
+                    TransitionManager.beginDelayedTransition(scrollView);
+                    expandibleView4.setVisibility(View.VISIBLE);
+                    arrowButton4.setBackgroundResource(R.drawable.ic_arrow_up);
+                }else{
+                    expandibleView4.setVisibility(View.GONE);
+                    TransitionManager.beginDelayedTransition(scrollView);
+                    arrowButton4.setBackgroundResource(R.drawable.ic_arrow_down_24);
+                }
+            }
+        });
+
         return root;
     }
 
     public View initComponents(View root){
+        scrollView=root.findViewById(R.id.scroll_view);
+
         expandibleView=root.findViewById(R.id.texto_sikntoas);
         arrowButton=root.findViewById(R.id.button_verweas);
-        cardView=root.findViewById(R.id.sintomas_cv);
 
         expandibleView2=root.findViewById(R.id.texto_tratamiento);
         arrowButton2=root.findViewById(R.id.button_verweas2);
-        cardView2=root.findViewById(R.id.tratamiendo_cv);
+
+        expandibleView3=root.findViewById(R.id.texto_preguntas);
+        arrowButton3=root.findViewById(R.id.button_verweas3);
+
+        expandibleView4=root.findViewById(R.id.texto_cuidados);
+        arrowButton4=root.findViewById(R.id.button_verweas4);
         return root;
     }
 }
