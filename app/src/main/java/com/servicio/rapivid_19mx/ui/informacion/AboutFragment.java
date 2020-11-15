@@ -19,8 +19,8 @@ import com.servicio.rapivid_19mx.R;
 
 public class AboutFragment extends Fragment {
 
-    private LinearLayout expandibleView, expandibleView2, expandibleView3, expandibleView4;
-    private Button arrowButton, arrowButton2, arrowButton3, arrowButton4;
+    private LinearLayout expandibleView, expandibleView2, expandibleView3, expandibleView4, expandibleView5;
+    private Button arrowButton, arrowButton2, arrowButton3, arrowButton4, arrowButton5;
     private ScrollView scrollView;
 
     public AboutFragment() {
@@ -97,6 +97,21 @@ public class AboutFragment extends Fragment {
             }
         });
 
+        arrowButton5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (expandibleView5.getVisibility()==View.GONE){
+                    TransitionManager.beginDelayedTransition(scrollView);
+                    expandibleView5.setVisibility(View.VISIBLE);
+                    arrowButton5.setBackgroundResource(R.drawable.ic_arrow_up);
+                }else{
+                    expandibleView5.setVisibility(View.GONE);
+                    TransitionManager.beginDelayedTransition(scrollView);
+                    arrowButton5.setBackgroundResource(R.drawable.ic_arrow_down_24);
+                }
+            }
+        });
+
         return root;
     }
 
@@ -114,6 +129,9 @@ public class AboutFragment extends Fragment {
 
         expandibleView4=root.findViewById(R.id.texto_cuidados);
         arrowButton4=root.findViewById(R.id.button_verweas4);
+
+        expandibleView5=root.findViewById(R.id.texto_recomendaciones);
+        arrowButton5=root.findViewById(R.id.button_verweas5);
         return root;
     }
 }

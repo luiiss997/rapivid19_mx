@@ -92,5 +92,9 @@
         &#8226; Cuando tosas o estornudes, cúbrete la nariz y la boca con el codo flexionado o con un pañuelo.\n
         &#8226; Si no te encuentras bien, quédate en casa.\n
         &#8226; En caso de que tengas fiebre, tos o dificultad para respirar, busca atención médica.</string>
-
+    <string name="recomendiaciones">Recomendaciones</string>
+    <string name="reco1">Utiliza Mascarilla.</string>
+    <string name="reco2">Lavate las manos.</string>
+    <string name="reco3">Manten una distancia segura.</string>
+    <string name="reco4">Si puedes, quédate en casa.</string>
 </resources>
