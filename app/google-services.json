@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "186966948408",
+    "firebase_url": "https://rapivid19-mx.firebaseio.com",
+    "project_id": "rapivid19-mx",
+    "storage_bucket": "rapivid19-mx.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:186966948408:android:bd8c8d499ca139e76704cd",
+        "android_client_info": {
+          "package_name": "com.servicio.rapivid_19mx"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "186966948408-non38f4a9n9lda64v2f7qm6i5d4tclnf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.servicio.rapivid_19mx",
+            "certificate_hash": "7863e0ff811fb12d18ec22b61c896a8c8231a760"
+          }
+        },
+        {
+          "client_id": "186966948408-46uh0vu66pqegfkp1gks69rc0u8rhbjg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDV3x1RUsK_a4N7rBKcW2ytZV2Iri0L-UM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "186966948408-46uh0vu66pqegfkp1gks69rc0u8rhbjg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
