@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">RapiVid-19 MX</string>
+    <string name="info_estado">Información</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
@@ -38,6 +39,17 @@
         asimismo se permitirá también que las personas puedan salir a caminar alrededor
         de sus domicilios durante el día.</string>
     <string name="rojo_s">No salgas si no es estrictamente necesario.</string>
+    <string name="naranja">Además de las actividades económicas esenciales, se permitirá que las
+        empresas de las actividades económicas no esenciales trabajen con el 30% del personal para su funcionamiento,
+        siempre tomando en cuenta las medidas de cuidado, se abrirán los espacios públicos abiertos
+        con un aforo (cantidad de personas) reducido.</string>
+    <string name="naranja_s">Si puedes, quédate en casa.</string>
+    <string name="amarillo">Todas las actividades laborales están permitidas. El espacio público
+        abierto se abre de forma regular, y los espacios públicos cerrados se pueden abrir con
+        aforo reducido. Estas actividades deben realizarse con medidas básicas de prevención.</string>
+    <string name="amarillo_s">Hay más actividades pero con precaución.</string>
+    <string name="verde">Se permiten todas las actividades, incluidas las escolares.</string>
+    <string name="verde_s">Podemos salir pero con precaución y prevención.</string>
     <!-- Pantalla About -->
     <string name="sintomas">Sintomas del Covid-19</string>
     <string name="sintomasewe"> El COVID-19 afecta de distintas maneras en función de cada persona.

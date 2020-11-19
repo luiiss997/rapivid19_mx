@@ -1,6 +1,8 @@
 package com.servicio.rapivid_19mx.modelo;
 
-public class Estado {
+import java.io.Serializable;
+
+public class Estado implements Serializable {
     private String nombre;
     private String activos;
     private String mortales;
@@ -67,4 +69,5 @@ public class Estado {
     public void setSemaforo(int semaforo) {
         this.semaforo = semaforo;
     }
+
 }

@@ -2,7 +2,6 @@ package com.servicio.rapivid_19mx.ui.estados;
 
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,18 +20,16 @@ import com.servicio.rapivid_19mx.R;
 import com.servicio.rapivid_19mx.modelo.Estado;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * A fragment representing a list of Items.
  */
 
 public class listaEstadosFragment extends Fragment {
-    final ArrayList<Estado> arrayListEstados = new ArrayList<Estado>();
+    private ArrayList<Estado> arrayListEstados = new ArrayList<Estado>();
     private RecyclerView recyclerView;
     private AdapterEstados adapterEstados;
     private DatabaseReference databaseReference;
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -56,12 +53,6 @@ public class listaEstadosFragment extends Fragment {
                     Estado estado = ds.getValue(Estado.class);
                     arrayListEstados.add(estado);
                 }
-
-                Estado puebla = new Estado("asdas", "asda", "asdas", "asdas", "asdas", 1);
-                Estado puebla2 = new Estado("peuieu", "asda", "asdas", "asdas", "asdas", 2);
-                arrayListEstados.add(puebla);
-                arrayListEstados.add(puebla2);
-
                 adapterEstados.notifyDataSetChanged();
             }
             @Override

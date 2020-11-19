@@ -60,7 +60,6 @@
                     app:layout_constraintBottom_toBottomOf="@id/sintomas"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.86"
-                    app:layout_constraintStart_toEndOf="@id/sintomas"
                     app:layout_constraintTop_toTopOf="@id/sintomas"
                     app:layout_constraintVertical_bias="0.5" />
 
@@ -144,7 +143,6 @@
                     app:layout_constraintBottom_toBottomOf="@id/textView_t"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.92"
-                    app:layout_constraintStart_toEndOf="@id/textView_t"
                     app:layout_constraintTop_toTopOf="@id/textView_t"
                     app:layout_constraintVertical_bias="0.32" />
 
@@ -238,7 +236,6 @@
                     app:layout_constraintBottom_toBottomOf="@id/qya"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.86"
-                    app:layout_constraintStart_toEndOf="@id/qya"
                     app:layout_constraintTop_toTopOf="@id/qya"
                     app:layout_constraintVertical_bias="0.5" />
 
@@ -336,7 +333,6 @@
                     app:layout_constraintBottom_toBottomOf="@id/cuidados"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.93"
-                    app:layout_constraintStart_toEndOf="@id/cuidados"
                     app:layout_constraintTop_toTopOf="@id/cuidados"
                     app:layout_constraintVertical_bias="0.4" />
 
@@ -417,7 +413,6 @@
                     app:layout_constraintBottom_toBottomOf="@id/recomen"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.90"
-                    app:layout_constraintStart_toEndOf="@id/recomen"
                     app:layout_constraintTop_toTopOf="@id/recomen"
                     app:layout_constraintVertical_bias="0.4" />
 

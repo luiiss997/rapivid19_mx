@@ -2,6 +2,7 @@ package com.servicio.rapivid_19mx.ui.estados;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,11 +17,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.servicio.rapivid_19mx.R;
 import com.servicio.rapivid_19mx.modelo.Estado;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 public class AdapterEstados extends RecyclerView.Adapter<AdapterEstados.ViewHolder>{
     private ArrayList<Estado> lista;
-    private Estado estado;
     private Context contexto;
     int position;
     FragmentActivity fragmentActivity;
@@ -48,7 +49,7 @@ public class AdapterEstados extends RecyclerView.Adapter<AdapterEstados.ViewHold
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(contexto, EstadosVista.class);
-                intent.putExtra("EstadoID", position);
+                intent.putExtra("KEY_ESTADO", edo);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 contexto.startActivity(intent);
             }
