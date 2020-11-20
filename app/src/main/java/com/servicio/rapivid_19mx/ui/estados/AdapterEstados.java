@@ -45,6 +45,7 @@ public class AdapterEstados extends RecyclerView.Adapter<AdapterEstados.ViewHold
         holder.setEstados(lista.get(position));
         final Estado edo = lista.get(position);
         holder.nombre.setText(edo.getNombre());
+        holder.setSemaforoImg(edo.getSemaforo());
         holder.constraintLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -82,9 +83,10 @@ public class AdapterEstados extends RecyclerView.Adapter<AdapterEstados.ViewHold
         }
 
         public void setEstados(Estado estados){
-            int semaforo;
             nombre.setText(estados.getNombre());
-            semaforo=estados.getSemaforo();
+        }
+
+        public void setSemaforoImg(int semaforo){
             switch (semaforo){
                 case 1:
                     semaforoImg.setImageResource(R.drawable.semaforo_rojo);
@@ -93,10 +95,10 @@ public class AdapterEstados extends RecyclerView.Adapter<AdapterEstados.ViewHold
                     semaforoImg.setImageResource(R.drawable.semaforo_naranja);
                     break;
                 case 3:
-                    semaforoImg.setImageAlpha(R.drawable.semaforo_amarillo);
+                    semaforoImg.setImageResource(R.drawable.semaforo_amarillo);
                     break;
                 case 4:
-                    semaforoImg.setImageAlpha(R.drawable.semaforo_verde);
+                    semaforoImg.setImageResource(R.drawable.semaforo_verde);
                     break;
             }
         }
