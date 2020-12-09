@@ -26,8 +26,8 @@
     <string name="totaly">Casos Totales</string>
     <string name="activos">Activos</string>
     <string name="total">Totales</string>
-    <string name="last_update">Última Actualización: 27/10/2020</string>
-    <string name="fuente">Fuente: Google</string>
+    <string name="last_update">Última Actualización:</string>
+    <string name="fuente">Fuente: Bing</string>
     <string name="mapa">Mapa de Casos</string>
     <string name="semafor">Semáforo Epidemiológico</string>
     <string name="semafor2">El semáforo se encuentra actualmente en:</string>
