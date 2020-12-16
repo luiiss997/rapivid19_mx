@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -46,6 +47,7 @@ public class listaEstadosFragment extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
         databaseReference = FirebaseDatabase.getInstance().getReference();
 
+        final View c=root;
         databaseReference.child("estados").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -57,6 +59,8 @@ public class listaEstadosFragment extends Fragment {
             }
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
+                Snackbar.make(c, "Esto es una prueba", Snackbar.LENGTH_LONG)
+                        .show();
             }
         });
 

@@ -31,14 +31,14 @@ import com.servicio.rapivid_19mx.R;
 import com.servicio.rapivid_19mx.modelo.Mexico;
 
 public class HomeFragment extends Fragment {
-    private TextView activos, mortales, recuperados, totales, u_act, fuente;
+    private TextView activos, mortales, recuperados, totales, u_act, fuente, txtf, txtf2;
     private Button button1, button2;
     private ImageView imageView1, imageView2;
     private DatabaseReference databaseReference;
     private Mexico mexico;
     private StorageReference storageReference;
     private FirebaseStorage storage;
-    private Bitmap bitmapImg, bitmapImg2, bitmapImg3;
+    private Bitmap bitmapImg, bitmapImg2, bitmapImg3, bitmapImg4;
     private boolean bnd=true;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -82,6 +82,7 @@ public class HomeFragment extends Fragment {
                 button1.setBackgroundResource(R.drawable.static_button);
                 button2.setBackgroundResource(R.drawable.spinner_bg);
                 imageView1.setImageBitmap(bitmapImg);
+                imageView2.setImageBitmap(bitmapImg4);
                 bnd=false;
             }
         });
@@ -92,6 +93,7 @@ public class HomeFragment extends Fragment {
                 button2.setBackgroundResource(R.drawable.static_button);
                 button1.setBackgroundResource(R.drawable.spinner_bg);
                 imageView1.setImageBitmap(bitmapImg2);
+                imageView2.setImageBitmap(bitmapImg3);
                 bnd=true;
             }
         });
@@ -120,7 +122,11 @@ public class HomeFragment extends Fragment {
                 AlertDialog.Builder mBuilder = new AlertDialog.Builder(context);
                 View mView = getLayoutInflater().inflate(R.layout.dialog_custom_layout, null);
                 PhotoView photoView = mView.findViewById(R.id.photoView);
-                photoView.setImageBitmap(bitmapImg3);
+                if (bnd){
+                    photoView.setImageBitmap(bitmapImg3);
+                }else{
+                    photoView.setImageBitmap(bitmapImg4);
+                }
                 mBuilder.setView(mView);
                 AlertDialog mDialog = mBuilder.create();
                 mDialog.show();
@@ -141,6 +147,8 @@ public class HomeFragment extends Fragment {
         imageView1=root.findViewById(R.id.imageView7);
         imageView2=root.findViewById(R.id.imageView6);
         fuente=root.findViewById(R.id.fuente);
+        txtf=root.findViewById(R.id.failure_text);
+        txtf2=root.findViewById(R.id.failure_text2);
         return root;
     }
 
@@ -163,7 +171,9 @@ public class HomeFragment extends Fragment {
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                //Agregar metodo por si falla la conexion a internachos uwu
+                imageView1.setVisibility(View.INVISIBLE);
+                imageView1.setEnabled(false);
+                txtf.setVisibility(View.VISIBLE);
             }
         });
 
@@ -178,7 +188,9 @@ public class HomeFragment extends Fragment {
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                //Agregar metodo por si falla la conexion a internachos uwu
+                imageView1.setVisibility(View.INVISIBLE);
+                txtf.setVisibility(View.VISIBLE);
+                imageView1.setEnabled(false);
             }
         });
 
@@ -188,13 +200,32 @@ public class HomeFragment extends Fragment {
             @Override
             public void onSuccess(byte[] bytes) {
                 bitmapImg3 = BitmapFactory.decodeByteArray(bytes,0, bytes.length);
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                imageView2.setVisibility(View.INVISIBLE);
+                txtf2.setVisibility(View.VISIBLE);
+                imageView2.setEnabled(false);
+            }
+        });
+
+        image1 = storageReference.child("images/COV19_Mapa.png");
+        MAXBYTES =  2156*1436;
+        image1.getBytes(MAXBYTES).addOnSuccessListener(new OnSuccessListener<byte[]>() {
+            @Override
+            public void onSuccess(byte[] bytes) {
+                bitmapImg4 = BitmapFactory.decodeByteArray(bytes,0, bytes.length);
                 imageView2.setImageBitmap(bitmapImg3);
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                //Agregar metodo por si falla la conexion a internachos uwu
+                imageView2.setVisibility(View.INVISIBLE);
+                txtf2.setVisibility(View.VISIBLE);
+                imageView2.setEnabled(false);
             }
         });
+
     }
 }

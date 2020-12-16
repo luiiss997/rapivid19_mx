@@ -109,4 +109,5 @@
     <string name="reco2">Lavate las manos.</string>
     <string name="reco3">Manten una distancia segura.</string>
     <string name="reco4">Si puedes, quédate en casa.</string>
+    <string name="failure">Sin conexión a Internet!</string>
 </resources>
