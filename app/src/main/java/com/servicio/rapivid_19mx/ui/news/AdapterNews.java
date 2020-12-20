@@ -7,10 +7,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.servicio.rapivid_19mx.R;
@@ -59,7 +59,7 @@ public class AdapterNews extends RecyclerView.Adapter<AdapterNews.ViewHolder> {
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         public TextView date_new, description_new, title_new;
-        public ConstraintLayout constraintLayout;
+        public LinearLayout constraintLayout;
         public ImageView image_new;
 
         public ViewHolder(@NonNull View itemView) {

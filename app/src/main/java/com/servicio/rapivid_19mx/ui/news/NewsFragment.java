@@ -26,7 +26,7 @@ public class NewsFragment extends Fragment {
     private RecyclerView recyclerView;
     private RSSObject RSSObj;
     private AdapterNews adapterNews;
-    private final String rss_link="https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fexpansion.mx%2Frss";
+    private static String rss_link="https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fexpansion.mx%2Frss";
 
     public NewsFragment() {
     }
@@ -80,8 +80,6 @@ public class NewsFragment extends Fragment {
                 }
             }
         };
-
         loadRSSAsync.execute(rss_link);
-
     }
 }

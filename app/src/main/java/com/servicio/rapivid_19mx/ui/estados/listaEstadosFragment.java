@@ -57,14 +57,15 @@ public class listaEstadosFragment extends Fragment {
                 }
                 adapterEstados.notifyDataSetChanged();
             }
+
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                Snackbar.make(c, "Esto es una prueba", Snackbar.LENGTH_LONG)
+                Snackbar.make(c, "Parece que no hay conexión a internet", Snackbar.LENGTH_SHORT)
                         .show();
             }
         });
 
-        adapterEstados = new AdapterEstados(arrayListEstados, getContext(), getActivity());
+        adapterEstados = new AdapterEstados(arrayListEstados, getContext());
         recyclerView.setAdapter(adapterEstados);
         return root;
     }

@@ -2,7 +2,6 @@ package com.servicio.rapivid_19mx.ui.estados;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,25 +10,20 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.servicio.rapivid_19mx.R;
 import com.servicio.rapivid_19mx.modelo.Estado;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 
-public class AdapterEstados extends RecyclerView.Adapter<AdapterEstados.ViewHolder>{
+public class AdapterEstados extends RecyclerView.Adapter<AdapterEstados.ViewHolder> {
     private ArrayList<Estado> lista;
     private Context contexto;
-    int position;
-    FragmentActivity fragmentActivity;
 
-    public AdapterEstados(ArrayList estados, Context context, FragmentActivity fragmentActivity){
+    public AdapterEstados(ArrayList<Estado> estados, Context context) {
         this.lista = estados;
-        this.contexto=context;
-        this.fragmentActivity=fragmentActivity;
+        this.contexto = context;
     }
 
     @NonNull
@@ -62,15 +56,7 @@ public class AdapterEstados extends RecyclerView.Adapter<AdapterEstados.ViewHold
         return lista.size();
     }
 
-    public int getPosition() {
-        return position;
-    }
-
-    public void setPosition(int position) {
-        this.position = position;
-    }
-
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView nombre;
         ImageView semaforoImg;
         ConstraintLayout constraintLayout;
@@ -82,12 +68,12 @@ public class AdapterEstados extends RecyclerView.Adapter<AdapterEstados.ViewHold
             this.constraintLayout = itemView.findViewById(R.id.constraint_cv);
         }
 
-        public void setEstados(Estado estados){
+        public void setEstados(Estado estados) {
             nombre.setText(estados.getNombre());
         }
 
-        public void setSemaforoImg(int semaforo){
-            switch (semaforo){
+        public void setSemaforoImg(int semaforo) {
+            switch (semaforo) {
                 case 1:
                     semaforoImg.setImageResource(R.drawable.semaforo_rojo);
                     break;

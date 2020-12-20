@@ -82,7 +82,7 @@ public class HomeFragment extends Fragment {
                 button1.setBackgroundResource(R.drawable.static_button);
                 button2.setBackgroundResource(R.drawable.spinner_bg);
                 imageView1.setImageBitmap(bitmapImg);
-                imageView2.setImageBitmap(bitmapImg4);
+                imageView2.setImageBitmap(bitmapImg3);
                 bnd=false;
             }
         });
@@ -93,7 +93,7 @@ public class HomeFragment extends Fragment {
                 button2.setBackgroundResource(R.drawable.static_button);
                 button1.setBackgroundResource(R.drawable.spinner_bg);
                 imageView1.setImageBitmap(bitmapImg2);
-                imageView2.setImageBitmap(bitmapImg3);
+                imageView2.setImageBitmap(bitmapImg4);
                 bnd=true;
             }
         });
@@ -123,9 +123,9 @@ public class HomeFragment extends Fragment {
                 View mView = getLayoutInflater().inflate(R.layout.dialog_custom_layout, null);
                 PhotoView photoView = mView.findViewById(R.id.photoView);
                 if (bnd){
-                    photoView.setImageBitmap(bitmapImg3);
-                }else{
                     photoView.setImageBitmap(bitmapImg4);
+                }else{
+                    photoView.setImageBitmap(bitmapImg3);
                 }
                 mBuilder.setView(mView);
                 AlertDialog mDialog = mBuilder.create();
@@ -216,7 +216,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onSuccess(byte[] bytes) {
                 bitmapImg4 = BitmapFactory.decodeByteArray(bytes,0, bytes.length);
-                imageView2.setImageBitmap(bitmapImg3);
+                imageView2.setImageBitmap(bitmapImg4);
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override

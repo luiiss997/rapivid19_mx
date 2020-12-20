@@ -1,12 +1,6 @@
 package com.servicio.rapivid_19mx.ui.informacion;
 
 import android.os.Bundle;
-
-import androidx.cardview.widget.CardView;
-import androidx.fragment.app.Fragment;
-
-import android.transition.AutoTransition;
-import android.transition.Transition;
 import android.transition.TransitionManager;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
+
+import androidx.fragment.app.Fragment;
 
 import com.servicio.rapivid_19mx.R;
 
